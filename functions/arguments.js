@@ -9,9 +9,18 @@ console.log(result)
 
 //default arguments
 
-let getScoreText = function(name, score){
-    console.log(name)
-    console.log(score)
+let getScoreText = function(name = 'Anonymous', score = 0){
+    return `Name: ${name} - Score: ${score}`
 }
 
-getScoreText()
+let scoreText = getScoreText(undefined, 99)
+console.log(scoreText)
+
+//challenge area
+
+let restauranteTip = function(total, tip = 0.2){
+    return `A ${tip*100}% tip on R$${total} would be R$${total*tip}`
+}
+
+let tip = restauranteTip(120.00, 0.3)
+console.log(tip)
