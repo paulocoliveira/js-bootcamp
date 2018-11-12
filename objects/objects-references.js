@@ -9,6 +9,43 @@ let addExpense = function(account, amount){
     console.log(account)
 }
 
-addExpense(myAccount, 2.50)
+//Challenge Area
 
-console.log(myAccount)
+//addIncome(account, amount)
+
+let addIncome = function(account, amount){
+    account.income = account.income + amount
+    console.log(account)
+}
+
+//reserAccount > expenses and incomes to zero
+
+let resetAccount = function(account){
+    account.expenses = 0
+    account.income = 0
+    console.log(account)
+}
+
+//getAccountSummary > Account for Paulo Oliveira has $900. $1000 in income. $100 in expenses.
+
+let getAccountSummary = function(account){
+    console.log(`Account for ${account.name} has $${account.income - account.expenses}. $${account.income} in income. $${account.expenses} in expenses.`)
+}
+
+//addIncome
+addIncome(myAccount, 1000)
+
+//addExpense
+addExpense(myAccount, 200)
+
+//addExpense
+addExpense(myAccount, 200)
+
+//getAccountSummary
+getAccountSummary(myAccount)
+
+//resetAccount
+resetAccount(myAccount)
+
+//getAccountSummary
+getAccountSummary(myAccount)
